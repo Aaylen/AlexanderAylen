@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const TextContainer = styled.div`
   position: absolute;
-  top: 20px;
+  transform: translate(0%, 10%);
   left: 20px;
   pointer-events: none;
 

@@ -43,7 +43,7 @@ const CameraAdjustment = () => {
       const aspectRatio = window.innerWidth / window.innerHeight;
 
       if (aspectRatio > 1) {
-        camera.position.set(0, 0, 1.4);
+        camera.position.set(0, 0, 1.45);
       } else {
         camera.position.set(0, 0, 1.6);
       }
