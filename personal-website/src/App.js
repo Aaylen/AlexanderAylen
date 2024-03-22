@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -22,9 +22,9 @@ const CubeSide = ({ position, rotation, component: Component }) => {
   );
 };
 
-const Cube = () => {
+const Cube = ({ rotation }) => {
   return (
-    <group>
+    <group rotation={rotation}>
       <CubeSide position={[0, 0, 0.5]} rotation={[0, 0, 0]} component={About} />
       <CubeSide position={[0, 0, -0.5]} rotation={[0, Math.PI, 0]} component={Experience} />
       <CubeSide position={[0, 0.5, 0]} rotation={[-Math.PI / 2, 0, 0]} component={Resume} />
@@ -35,7 +35,40 @@ const Cube = () => {
   );
 };
 
+const CameraAdjustment = () => {
+  const { camera } = useThree();
+
+  useEffect(() => {
+    const handleResize = () => {
+      const aspectRatio = window.innerWidth / window.innerHeight;
+
+      if (aspectRatio > 1) {
+        camera.position.set(0, 0, 1.4);
+      } else {
+        camera.position.set(0, 0, 1.6);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [camera]);
+
+  return null;
+};
+
+
 const App = () => {
+  const [rotation, setRotation] = useState([0, 0, 0]);
+
+  const handleRotate = () => {
+    setRotation([rotation[0] + Math.PI / 2, rotation[1] + Math.PI / 2, rotation[2] + Math.PI / 2]);
+  };
+
   return (
     <Router>
       <Routes>
@@ -43,16 +76,15 @@ const App = () => {
           path="/"
           element={
             <>
-              <WaterTitle/>
-              <Canvas
-                camera={{ position: [0, 0, 1.4] }}
-                style={{ width: '100vw', height: '100vh' }}
-              >
+              <WaterTitle />
+              <Canvas style={{ width: '100vw', height: '100vh' }}>
+                <CameraAdjustment />
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <Cube />
+                <Cube rotation={rotation} />
                 <OrbitControls enableRotate enableZoom enablePan />
               </Canvas>
+              <button onClick={handleRotate}>Rotate Cube</button>
             </>
           }
         />
