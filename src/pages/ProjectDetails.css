@@ -1,0 +1,40 @@
+.container2{
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    transform: translate(20%,5%);
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    background-color: lightblue;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.content{
+    height: 500px;
+    background-color: #eeeeee;
+    margin-top: 5px;
+}
+.slideshow{
+    height: 300px;
+    background-color: #eeeeee;
+}
+.buttonholder{
+    height: 50px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: lightblue;
+    
+}
+.button{
+    color: black;
+    text-decoration: none;
+}
+.bottom{
+    height: 150px;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Canvas, useThree } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { Canvas, useThree, useFrame } from '@react-three/fiber';
+import { OrbitControls, useProgress } from '@react-three/drei';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
@@ -11,6 +11,9 @@ import Courses from './pages/Courses';
 import ProjectDetails from './pages/ProjectDetails';
 import WaterTitle from './components/WaterTitle';
 import ExperienceDetails from './pages/ExperienceDetails';
+import LoadingText from './components/LoadingText';
+import { Html } from '@react-three/drei';
+import * as THREE from 'three';
 
 const CubeSide = ({ position, rotation, component: Component }) => {
   return (
@@ -62,6 +65,8 @@ const CameraAdjustment = () => {
 };
 
 
+
+
 const App = () => {
   const [rotation, setRotation] = useState([0, 0, 0]);
 
@@ -70,21 +75,32 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/AlexanderAylen">
       <Routes>
         <Route
           path="/"
           element={
             <>
               <WaterTitle />
+              {/* <LoadingText /> */}
               <Canvas style={{ width: '100vw', height: '100vh' }}>
                 <CameraAdjustment />
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
                 <Cube rotation={rotation} />
-                <OrbitControls enableRotate enableZoom enablePan />
+                
+                <OrbitControls
+                enableRotate
+                enableZoom
+                enablePan={false}
+                rotateSpeed={0.5}
+                zoomSpeed={0.5}
+                minDistance={1}
+                maxDistance={5}
+                mouseButtons={{ RIGHT: THREE.MOUSE.ROTATE, LEFT: THREE.MOUSE.ROTATE  }} 
+                />
+                
               </Canvas>
-              <button onClick={handleRotate}>Rotate Cube</button>
             </>
           }
         />
