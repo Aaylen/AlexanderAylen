@@ -3,13 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { Text, Image } from '@react-three/drei';
 import SoustWebsiteImage from '../images/SoustWebsite.jpg';
 import AtwoodsMachineImage from '../images/AtwoodsMachine.jpg';
-
+import WebsitePhoto from '../images/websitePhoto.png';
 const Projects = () => {
   const navigate = useNavigate();
   const [projects] = useState([
-    { id: 1, title: 'Personal Website', image: SoustWebsiteImage },
-    { id: 2, title: 'E-commerce Website', image: SoustWebsiteImage },
-    { id: 3, title: "Atwood's Machine", image: AtwoodsMachineImage },
+    { id: 1, title: 'Personal Website', image: WebsitePhoto},
+    { id: 2, title: 'E-commerce Website', image: SoustWebsiteImage, link:  'https://devpost.com/software/ecommerce-website-plw4ch'},
+    { id: 3, title: "Atwood's Machine", image: AtwoodsMachineImage, link: 'https://devpost.com/software/python-atwoods-machine'},
   ]);
 
   const [hoveredTitle, setHoveredTitle] = useState(null);
@@ -19,8 +19,12 @@ const Projects = () => {
     setHoveredTitle(title);
   };
 
-  const handleTitleClick = (title) => {
-    navigate(`/projects/${title}`);
+  const handleTitleClick = (title, link) => {
+    if (link) {
+      window.location.href = link;
+    } else {
+      navigate(`/projects/${title}`);
+    }
   };
 
   return (
@@ -62,7 +66,7 @@ const Projects = () => {
                 handleTitleHover(null);
                 document.body.style.cursor = 'default';
               }}
-              onClick={() => handleTitleClick(project.title)}
+              onClick={() => handleTitleClick(project.title, project.link)}
             >
               {project.title}
             </Text>

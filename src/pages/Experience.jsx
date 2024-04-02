@@ -1,14 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Text, Image } from '@react-three/drei';
-import SoustWebsiteImage from '../images/SoustWebsite.jpg';
-import AtwoodsMachineImage from '../images/AtwoodsMachine.jpg';
+import speedy from '../images/speedy.jpg';
+import trashai1 from '../images/trashai1.jpg';
 
 const Experience = () => {
   const navigate = useNavigate();
   const [Experiences] = useState([
-    { id: 1, title: 'INRIX 2023', image: SoustWebsiteImage },
-    { id: 2, title: 'Hack for Humanity', image: SoustWebsiteImage },
+    { id: 1, title: 'INRIX 2023', image: speedy, link: 'https://devpost.com/software/speedily' },
+    { id: 2, title: 'Hack for Humanity', image: trashai1, link: 'https://devpost.com/software/trash-classification-ai-mobile-app' },
     // { id: 3, title: "Atwood's Machine", image: AtwoodsMachineImage },
   ]);
   const [hoveredTitle, setHoveredTitle] = useState(null);
@@ -18,8 +18,9 @@ const Experience = () => {
     setHoveredTitle(title);
   };
 
-  const handleTitleClick = (title) => {
-    navigate(`/experiences/${title}`);
+  const handleTitleClick = (title, link) => {
+    // navigate(`/experiences/${title}`);
+    window.location.href = link;
   };
 
   return (
@@ -56,7 +57,7 @@ const Experience = () => {
                 handleTitleHover(null);
                 document.body.style.cursor = 'default';
               }}
-              onClick={() => handleTitleClick(Experiences.title)}
+              onClick={() => handleTitleClick(Experiences.title, Experiences.link)}
             >
               {Experiences.title}
             </Text>

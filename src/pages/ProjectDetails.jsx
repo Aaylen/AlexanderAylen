@@ -15,11 +15,13 @@ const ProjectDetails = () => {
         <div className='content'>
 
         </div>
+        <Link className='button' to="/">
         <div className='bottom'>
           <div className='buttonholder' >
-            <Link className='button' to="/">Go back to the cube</Link>
+            <h1>Go back to the cube</h1>
           </div>
         </div>
+        </Link>
       </div>
     </div>
   );

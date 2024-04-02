@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Image } from '@react-three/drei';
+import { Image } from '@react-three/drei';
 import resume from '../images/resume.png';
 
 const Resume = () => {
