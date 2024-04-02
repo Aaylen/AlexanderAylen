@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/AlexanderAylen/static/css/main.6063c591.css",
-    "main.js": "/AlexanderAylen/static/js/main.242015cd.js",
+    "main.css": "/AlexanderAylen/static/css/main.f2aec37f.css",
+    "main.js": "/AlexanderAylen/static/js/main.aeff5b48.js",
     "static/js/451.68455135.chunk.js": "/AlexanderAylen/static/js/451.68455135.chunk.js",
     "static/js/453.253ccfac.chunk.js": "/AlexanderAylen/static/js/453.253ccfac.chunk.js",
     "static/media/professional.png": "/AlexanderAylen/static/media/professional.1a51262f394bcb3d2c22.png",
     "static/media/photoCollage.jpg": "/AlexanderAylen/static/media/photoCollage.ef9d12179e1da83bd3ce.jpg",
+    "static/media/websitePhoto.png": "/AlexanderAylen/static/media/websitePhoto.4a3428d60114ce9b0e70.png",
     "static/media/resume.png": "/AlexanderAylen/static/media/resume.0dab3b6d6a6154a5b84c.png",
+    "static/media/speedy.jpg": "/AlexanderAylen/static/media/speedy.1832ecca0140c829aa49.jpg",
     "static/media/SoustWebsite.jpg": "/AlexanderAylen/static/media/SoustWebsite.fa695d92145ea1a6d80c.jpg",
+    "static/media/trashai1.jpg": "/AlexanderAylen/static/media/trashai1.c6aab31dd8f541296ea7.jpg",
     "static/media/AtwoodsMachine.jpg": "/AlexanderAylen/static/media/AtwoodsMachine.9266bbe0bc64906da5aa.jpg",
     "static/media/mail.png": "/AlexanderAylen/static/media/mail.7f0432c3a7d36f687c69.png",
     "static/media/github.png": "/AlexanderAylen/static/media/github.a855c3975c028d8069f5.png",
     "static/media/li.png": "/AlexanderAylen/static/media/li.6ad6a2a824e3d0059faa.png",
     "index.html": "/AlexanderAylen/index.html",
-    "main.6063c591.css.map": "/AlexanderAylen/static/css/main.6063c591.css.map",
-    "main.242015cd.js.map": "/AlexanderAylen/static/js/main.242015cd.js.map",
+    "main.f2aec37f.css.map": "/AlexanderAylen/static/css/main.f2aec37f.css.map",
+    "main.aeff5b48.js.map": "/AlexanderAylen/static/js/main.aeff5b48.js.map",
     "451.68455135.chunk.js.map": "/AlexanderAylen/static/js/451.68455135.chunk.js.map",
     "453.253ccfac.chunk.js.map": "/AlexanderAylen/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6063c591.css",
-    "static/js/main.242015cd.js"
+    "static/css/main.f2aec37f.css",
+    "static/js/main.aeff5b48.js"
   ]
 }
