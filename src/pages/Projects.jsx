@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { Text, Image } from '@react-three/drei';
 import SoustWebsiteImage from '../images/SoustWebsite.jpg';
 import AtwoodsMachineImage from '../images/AtwoodsMachine.jpg';
-import WebsitePhoto from '../images/websitePhoto.png';
+// import WebsitePhoto from '../images/websitePhoto.png';
+import FaceRec from '../images/faceRec.png';
 const Projects = () => {
   const navigate = useNavigate();
   const [projects] = useState([
-    { id: 1, title: 'Personal Website', image: WebsitePhoto},
+    { id: 1, title: 'Face Recognition/Webscraper', image: FaceRec, link: "https://devpost.com/software/facial-recognition-and-webscraper"},
     { id: 2, title: 'E-commerce Website', image: SoustWebsiteImage, link:  'https://devpost.com/software/ecommerce-website-plw4ch'},
     { id: 3, title: "Atwood's Machine", image: AtwoodsMachineImage, link: 'https://devpost.com/software/python-atwoods-machine'},
   ]);
@@ -41,7 +42,7 @@ const Projects = () => {
           <group key={project.id} position={[0, -index * 0.2, 0]}>
             <mesh>
               <planeGeometry args={[0.8, 0.15]} />
-              <meshBasicMaterial color={index % 2 === 0 ? 'lightgreen' : 'lightpink'} />
+              <meshBasicMaterial color={index % 2 === 0 ? 'lightgreen' : 'lightgreen'} />
             </mesh>
             <Image
               url={project.image}
@@ -51,8 +52,8 @@ const Projects = () => {
             />
             <Text
               ref={(ref) => (textRefs.current[index] = ref)}
-              position={[-0.15, 0, 0.01]}
-              fontSize={0.05}
+              position={[-0.2, 0, 0.01]}
+              fontSize={0.04}
               color={hoveredTitle === project.title ? 'blue' : 'black'}
               anchorX="left"
               anchorY="middle"

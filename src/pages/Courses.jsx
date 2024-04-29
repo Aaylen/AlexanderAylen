@@ -13,7 +13,7 @@ const Courses = () => {
 
   const subjectColors = {
     'Math': 'lightgreen',
-    'Computer Science': 'lightpink',
+    'Computer Science': 'lightgreen',
     'Future Courses': 'lightyellow',
   };
 

@@ -37,7 +37,7 @@ const Experience = () => {
           <group key={Experiences.id} position={[0, -index * 0.2, 0]}>
             <mesh>
               <planeGeometry args={[0.8, 0.15]} />
-              <meshBasicMaterial color={index % 2 === 0 ? 'lightgreen' : 'lightpink'} />
+              <meshBasicMaterial color={index % 2 === 0 ? 'lightgreen' : 'lightgreen'} />
             </mesh>
             <Image url={Experiences.image} position={[-0.32, 0, 0.01]} scale={[0.15, 0.15, 1]} transparent />
             <Text
