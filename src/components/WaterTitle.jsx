@@ -52,7 +52,7 @@ const TextBlack = styled.h1`
   margin: 0;
   padding: 0;
   font-size: 3.5rem;
-  color: black;
+  color: yellow;
   position: absolute;
   top: 0;
   left: 0;

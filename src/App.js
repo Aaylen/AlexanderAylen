@@ -11,6 +11,7 @@ import Courses from './pages/Courses';
 import ProjectDetails from './pages/ProjectDetails';
 import WaterTitle from './components/WaterTitle';
 import ExperienceDetails from './pages/ExperienceDetails';
+import Background from './components/Background';
 import * as THREE from 'three';
 
 
@@ -24,7 +25,15 @@ const CubeSide = ({ position, rotation, component: Component }) => {
   );
 };
 
-const Cube = ({ rotation }) => {
+const Cube = ({ rotation, onRotationChange }) => {
+  // const rotationSpeed = 0; 
+
+  // useFrame((state, delta) => {
+  //   const newRotation = [...rotation];
+  //   newRotation[1] += rotationSpeed * delta;
+  //   onRotationChange(newRotation);
+  // });
+
   return (
     <group rotation={rotation}>
       <CubeSide position={[0, 0, 0.5]} rotation={[0, 0, 0]} component={About} />
@@ -39,7 +48,7 @@ const Cube = ({ rotation }) => {
 
 const CameraAdjustment = () => {
   const { camera } = useThree();
-
+  
   useEffect(() => {
     const handleResize = () => {
       const aspectRatio = window.innerWidth / window.innerHeight;
@@ -67,30 +76,36 @@ const CameraAdjustment = () => {
 
 
 const App = () => {
-  const [rotation] = useState([0, 0, 0]);
+  const [rotation, setRotation] = useState([0, -0.5, 0]);
+
+  const handleRotationChange = (newRotation) => {
+    setRotation(newRotation);
+  };
 
   return (
     <Router basename="/AlexanderAylen">
       <Routes>
         <Route path="/" element={
           <>
+            <Background/>
             <WaterTitle />
             <Canvas style={{ width: '100vw', height: '100vh' }}>
               <CameraAdjustment />
               <ambientLight />
               <pointLight position={[10, 10, 10]} />
-              <Cube rotation={rotation} />
+              <Cube rotation={rotation} onRotationChange={setRotation}/>
               <OrbitControls 
               enableRotate 
-              enableZoom 
+              enableZoom={false}
               enablePan={false} 
               rotateSpeed={0.75} 
               zoomSpeed={0.75} 
               minDistance={1} 
-              maxDistance={5} 
+              maxDistance={4} 
               mouseButtons={{ RIGHT: THREE.MOUSE.ROTATE, LEFT: THREE.MOUSE.ROTATE }} 
               />
             </Canvas>
+            
           </>
         } />
         <Route path="/experiences/:experienceTitle" element={<ExperienceDetails />} />
