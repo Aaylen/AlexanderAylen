@@ -96,7 +96,7 @@ const App = () => {
               <Cube rotation={rotation} onRotationChange={setRotation}/>
               <OrbitControls 
               enableRotate 
-              enableZoom={false}
+              enableZoom={true}
               enablePan={false} 
               rotateSpeed={0.75} 
               zoomSpeed={0.75} 

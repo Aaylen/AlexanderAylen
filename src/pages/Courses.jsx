@@ -4,11 +4,11 @@ import { Text } from '@react-three/drei';
 
 const Courses = () => {
   const [courses] = useState([
-    { id: 1, title: ' Calculus and Analytic Geometry I', grade: "A", subject: "Math" },
-    { id: 2, title: 'Introduction to Computer Science', grade: "A", subject: "Computer Science" },
-    { id: 3, title: " Calculus and Analytic Geometry II", grade: "A", subject: "Math" },
-    { id: 4, title: "Object-Oriented Programming", grade: "-", subject: "Future Courses" },
-    { id: 5, title: "Calculus and Analytic Geometry III", grade: "-", subject: "Future Courses" },
+    { id: 1, title: 'Data Structures and Algorithms', grade: "A", subject: "Computer Science" },
+    { id: 2, title: 'Object Oriented Programming C++', grade: "A", subject: "Computer Science" },
+    { id: 3, title: "Calculus and Analytic Geometry IV", grade: "A", subject: "Math" },
+    { id: 4, title: "Discrete Math", grade: "A", subject: "Math" },
+    { id: 5, title: "Embedded Systems", grade: "-", subject: "Future Courses" },
   ]);
 
   const subjectColors = {

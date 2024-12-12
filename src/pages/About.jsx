@@ -40,7 +40,7 @@ const About = () => {
         About Me
       </Text>
       <Text position={[-0.15, 0.09, 0.01]} fontSize={0.04} maxWidth={0.55} color="black" anchorX="center" anchorY="middle">
-        Freshman at Santa Clara University pursuing a double major in Computer Science and Finance with a minor in Mathematics. Experienced in backend tasks such as
+        Sophmore at Santa Clara University pursuing a double major in Computer Science and Finance with a minor in Mathematics. Experienced in backend tasks such as
       </Text>
       <Text position={[0, -0.208, 0.01]} fontSize={0.04} maxWidth={0.85} color="black" anchorX="center" anchorY="middle">
         creating API endpoints, training CNNs, and building webscrapers, but I also enjoy frontend tasks. Looking for challenging opportunities to help me grow both as a person and an engineer.

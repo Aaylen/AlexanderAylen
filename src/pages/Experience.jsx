@@ -3,12 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { Text, Image } from '@react-three/drei';
 import speedy from '../images/speedy.jpg';
 import trashai1 from '../images/trashai1.jpg';
+import profitp from '../images/profitp.png';
 
 const Experience = () => {
   const navigate = useNavigate();
   const [Experiences] = useState([
     { id: 1, title: 'INRIX 2023', image: speedy, link: 'https://devpost.com/software/speedily' },
     { id: 2, title: 'Hack for Humanity', image: trashai1, link: 'https://devpost.com/software/trash-classification-ai-mobile-app' },
+    { id: 2, title: 'AWS Hack 2024', image: profitp, link: 'https://devpost.com/software/profit-pilot' } 
     // { id: 3, title: "Atwood's Machine", image: AtwoodsMachineImage },
   ]);
   const [hoveredTitle, setHoveredTitle] = useState(null);
