@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/AlexanderAylen/static/css/main.664e68b6.css",
-    "main.js": "/AlexanderAylen/static/js/main.b6ea6928.js",
-    "static/js/451.68455135.chunk.js": "/AlexanderAylen/static/js/451.68455135.chunk.js",
+    "main.js": "/AlexanderAylen/static/js/main.0d30fa3f.js",
+    "static/js/451.297b083c.chunk.js": "/AlexanderAylen/static/js/451.297b083c.chunk.js",
     "static/js/453.253ccfac.chunk.js": "/AlexanderAylen/static/js/453.253ccfac.chunk.js",
     "static/media/professional.png": "/AlexanderAylen/static/media/professional.1a51262f394bcb3d2c22.png",
     "static/media/photoCollage.jpg": "/AlexanderAylen/static/media/photoCollage.8716df0bff57f7043277.jpg",
     "static/media/faceRec.png": "/AlexanderAylen/static/media/faceRec.77a2428b805aaa2e5984.png",
+    "static/media/profitp.png": "/AlexanderAylen/static/media/profitp.3a2a8bb3d0220736f498.png",
     "static/media/resume.png": "/AlexanderAylen/static/media/resume.0dab3b6d6a6154a5b84c.png",
     "static/media/speedy.jpg": "/AlexanderAylen/static/media/speedy.1832ecca0140c829aa49.jpg",
     "static/media/SoustWebsite.jpg": "/AlexanderAylen/static/media/SoustWebsite.fa695d92145ea1a6d80c.jpg",
@@ -17,12 +18,12 @@
     "static/media/li.png": "/AlexanderAylen/static/media/li.6ad6a2a824e3d0059faa.png",
     "index.html": "/AlexanderAylen/index.html",
     "main.664e68b6.css.map": "/AlexanderAylen/static/css/main.664e68b6.css.map",
-    "main.b6ea6928.js.map": "/AlexanderAylen/static/js/main.b6ea6928.js.map",
-    "451.68455135.chunk.js.map": "/AlexanderAylen/static/js/451.68455135.chunk.js.map",
+    "main.0d30fa3f.js.map": "/AlexanderAylen/static/js/main.0d30fa3f.js.map",
+    "451.297b083c.chunk.js.map": "/AlexanderAylen/static/js/451.297b083c.chunk.js.map",
     "453.253ccfac.chunk.js.map": "/AlexanderAylen/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.664e68b6.css",
-    "static/js/main.b6ea6928.js"
+    "static/js/main.0d30fa3f.js"
   ]
 }
