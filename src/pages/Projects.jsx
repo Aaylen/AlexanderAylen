@@ -2,15 +2,17 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Text, Image } from '@react-three/drei';
 import SoustWebsiteImage from '../images/SoustWebsite.jpg';
-import AtwoodsMachineImage from '../images/AtwoodsMachine.jpg';
-// import WebsitePhoto from '../images/websitePhoto.png';
+import SCUScheduleHelper from '../images/SCUScheduleHelper.png';
 import FaceRec from '../images/faceRec.png';
+// import AtwoodsMachineImage from '../images/AtwoodsMachine.jpg';
+// import WebsitePhoto from '../images/websitePhoto.png';
+
 const Projects = () => {
   const navigate = useNavigate();
   const [projects] = useState([
-    { id: 1, title: 'Face Recognition/Webscraper', image: FaceRec, link: "https://devpost.com/software/facial-recognition-and-webscraper"},
+    { id: 1, title: 'SCU Schedule Helper', image: SCUScheduleHelper, link: 'https://chromewebstore.google.com/detail/scu-schedule-helper/feinilelhamnodbmhjhacnajbbhapdhj?hl=en'},
     { id: 2, title: 'E-commerce Website', image: SoustWebsiteImage, link:  'https://devpost.com/software/ecommerce-website-plw4ch'},
-    { id: 3, title: "Atwood's Machine", image: AtwoodsMachineImage, link: 'https://devpost.com/software/python-atwoods-machine'},
+    { id: 3, title: 'Face Recognition/Webscraper', image: FaceRec, link: "https://devpost.com/software/facial-recognition-and-webscraper"},
   ]);
 
   const [hoveredTitle, setHoveredTitle] = useState(null);
