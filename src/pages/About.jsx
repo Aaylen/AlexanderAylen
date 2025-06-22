@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { Text, Image } from '@react-three/drei';
 import { useLoader } from '@react-three/fiber';
 import { TextureLoader } from 'three';
@@ -10,19 +10,16 @@ import Mail from '../images/mail.png';
 
 const About = () => {
   const texture = useLoader(TextureLoader, headshot);
-  const [hovered, setHovered] = useState(null);
 
   const handleIconClick = useCallback((url) => {
     window.open(url, '_blank');
   }, []);
 
   const handlePointerOver = useCallback((index) => {
-    setHovered(index);
     document.body.style.cursor = 'pointer'; // Change cursor to pointer
   }, []);
 
   const handlePointerOut = useCallback(() => {
-    setHovered(null);
     document.body.style.cursor = 'auto'; // Reset cursor to default
   }, []);
 
@@ -40,10 +37,10 @@ const About = () => {
         About Me
       </Text>
       <Text position={[-0.15, 0.09, 0.01]} fontSize={0.04} maxWidth={0.55} color="black" anchorX="center" anchorY="middle">
-        Sophmore at Santa Clara University pursuing a double major in Computer Science and Finance with a minor in Mathematics. Experienced in backend tasks such as
+        Junior at Santa Clara University pursuing a double major in Computer Science and Finance with a minor in Mathematics. Experienced in backend tasks such as
       </Text>
       <Text position={[0, -0.208, 0.01]} fontSize={0.04} maxWidth={0.85} color="black" anchorX="center" anchorY="middle">
-        creating API endpoints, training CNNs, and building webscrapers, but I also enjoy frontend tasks. Looking for challenging opportunities to help me grow both as a person and an engineer.
+        creating API endpoints, building backend solutions with AWS services, and building webscrapers, but I also enjoy frontend tasks. Looking for challenging opportunities to help me grow as a person and an engineer.
       </Text>
       <group position={[0, -0.394, 0.01]}>
         <mesh

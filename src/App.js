@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Canvas, useThree, useFrame } from '@react-three/fiber';
-import { OrbitControls, useProgress } from '@react-three/drei';
+import { Canvas, useThree } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
@@ -19,7 +19,7 @@ const CubeSide = ({ position, rotation, component: Component }) => {
   return (
     <mesh position={position} rotation={rotation}>
       <boxGeometry args={[1, 1, 0.01]} />
-      <meshStandardMaterial color="white" />
+      <meshBasicMaterial color="white" />
       <Component />
     </mesh>
   );
@@ -77,10 +77,6 @@ const CameraAdjustment = () => {
 
 const App = () => {
   const [rotation, setRotation] = useState([0, -0.5, 0]);
-
-  const handleRotationChange = (newRotation) => {
-    setRotation(newRotation);
-  };
 
   return (
     <Router basename="/AlexanderAylen">

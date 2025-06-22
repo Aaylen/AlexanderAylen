@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useRef } from 'react';
 import { Text } from '@react-three/drei';
 
 const Courses = () => {
@@ -8,7 +7,7 @@ const Courses = () => {
     { id: 2, title: 'Object Oriented Programming C++', grade: "A", subject: "Computer Science" },
     { id: 3, title: "Calculus and Analytic Geometry IV", grade: "A", subject: "Math" },
     { id: 4, title: "Discrete Math", grade: "A", subject: "Math" },
-    { id: 5, title: "Embedded Systems", grade: "-", subject: "Future Courses" },
+    { id: 5, title: "Optimization I", grade: "-", subject: "Future Courses" },
   ]);
 
   const subjectColors = {
